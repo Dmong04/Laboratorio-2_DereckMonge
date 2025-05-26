@@ -1,0 +1,26 @@
+<div class="col-md-12 mt-3">
+    <h2>Crear nueva categoria</h2>
+    <span>
+        @switch(status){
+            @case (0){
+                <div class="alert alert-success">Registro éxitoso</div>
+            }
+            @case (1){
+                <div class="alert alert-warning">Registro no guardado</div>
+            }
+            @case (2){
+                <div class="alert alert-danger">Error de servidor!</div>
+            }
+        }
+    </span>
+    <form #newCategoryForm="ngForm" (ngSubmit)="onSubmit(newCategoryForm)">
+        <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="category.name" required>
+            </div>
+            <div>
+                <input type="submit" class="btn btn-primary mt-3" value="Guardar">
+            </div>
+    </form>
+
+</div>

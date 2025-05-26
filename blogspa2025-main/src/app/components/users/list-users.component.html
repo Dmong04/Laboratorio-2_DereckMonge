@@ -1,0 +1,32 @@
+<div class="col-md-12 mt-3">
+  <h2>Listado y búsqueda de usuarios</h2>
+  <form class="d-flex" role="search" (ngSubmit)="onSearch()" #searchForm="ngForm">
+    <input class="form-control me-2" type="search" name="searchEmail" [(ngModel)]="searchEmail"
+      placeholder="Buscar por email" aria-label="Search" required />
+    <button class="btn btn-outline-success" type="submit">Buscar</button>
+    <button class="btn btn-outline-secondary ms-2" type="button" (click)="loadUsers()">Limpiar</button>
+  </form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Rol</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of users; let i = index">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.last_name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.role}}</td>
+        <td><button class="change-role btn btn-outline-success" (click)="changeRole(item.id)">{{item.role}}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
