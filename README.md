@@ -1,4 +1,4 @@
-# Laboratorio-2_DereckMonge || IPORTANTE: Leer el archivo README
+# Laboratorio-2_DereckMonge || IMPORTANTE: Leer el archivo README
 Laboratorio #2 del curso dde programación IV
 
 # Componentes modificados para la resolución del laboratorio:
